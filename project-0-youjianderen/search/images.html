@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Working Google Search Engine Website Design</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section>
+      <header>
+        <ul>
+          <li><a href="index.html">Google</a></li>
+          <li><a href="advance.html">Advanced</a></li>
+        </ul>
+      </header>
+      <div class="main">
+        <img src="google.png">
+        <div class="searchBx">
+          <input type="text" name="" class="query" value="" onkeydown="keydown()">
+          <div class="icons">
+            <div><img src="search.png"></div>
+
+          </div>
+        </div>
+        <!-- <div class="button">
+          <button class="searchBtn">Google Search</button>
+          <button class="luckyBtn">I'm feeling lucky</button>
+          
+        </div> -->
+      </div>
+    </section>
+    <script>
+        let query = document.querySelector('.query');
+        // let searchBtn = document.querySelector('.searchBtn');
+        // let luckyBtn = document.querySelector('.luckyBtn');
+        function keydown(){
+          var event = arguments.callee.caller.arguments[0] || window.event;
+          if(event.keyCode == 13){
+            let url = 'https://www.google.com/search?hl=zh-CN&tbm=isch&source=hp&biw=1440&bih=849&q='+query.value;
+            window.location = url;
+          }
+        }
+        // searchBtn.onclick = function(){
+        //   let url = 'https://www.google.com/search?q='+query.value;
+        //   window.open(url);
+        // }
+        // luckyBtn.onclick = function(){
+        //   let url = 'http://www.google.com/search?hl=zh-CN&btnI=q&q='+query.value;
+        //   window.open(url);
+          
+        // }
+    </script>
+  </body>
+</html>
